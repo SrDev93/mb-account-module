@@ -40,8 +40,12 @@
                                     <option value="users">مدیریت کاربران</option>
                                     <option value="slider">اسلایدر</option>
                                     <option value="products">محصولات</option>
+                                    <option value="OtherProduct">سایر محصولات</option>
+                                    <option value="service">خدمات</option>
                                     <option value="blogs">مقالات</option>
                                     <option value="news">اخبار</option>
+                                    <option value="gallery">گالری</option>
+                                    <option value="webinar">وبینار</option>
                                     <option value="LandingPage">صفحات لندینگ</option>
                                     <option value="Solution">راه حل ها</option>
                                     <option value="KnowledgeBase">پایگاه دانش</option>
@@ -51,6 +55,7 @@
                                     <option value="newsletters">خبرنامه</option>
                                     <option value="contacts">تماس با ما</option>
                                     <option value="socials">شبکه های اجتماعی</option>
+                                    <option value="tickets">تیکت ها</option>
                                     <option value="comments">دیدگاه کاربران</option>
                                     <option value="setting">تنظیمات</option>
                                 </select>

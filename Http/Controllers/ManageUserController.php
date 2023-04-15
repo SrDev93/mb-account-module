@@ -4,6 +4,7 @@ namespace Modules\Account\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Role;
+use Illuminate\Support\Facades\Auth;
 use Modules\Account\Entities\User;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
@@ -21,6 +22,13 @@ class ManageUserController extends Controller
      */
     public function index()
     {
+//        if (\request()->session()->has('brand_id')){
+//            $users = User::where('brand_id', \request()->session()->get('brand_id'))->get();
+//        }elseif (Auth::user()->brand_id) {
+//            $users = User::where('brand_id', Auth::user()->brand_id)->get();
+//        }else {
+//            $users = User::all();
+//        }
         $users = User::all();
 
         return view('account::front.manage_user.index',compact('users'));
@@ -47,8 +55,8 @@ class ManageUserController extends Controller
     {
 
         $request->validate([
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
+            'FirstName' => 'required|string',
+            'LastName' => 'required|string',
             'mobile' => 'required|unique:users|max:11',
             'email' => 'required|email',
             'password' => 'required|min:6',
@@ -62,8 +70,8 @@ class ManageUserController extends Controller
             // create user
             $user = User::create([
                 'brand_id' => $request->brand_id,
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
+                'FirstName' => $request->FirstName,
+                'LastName' => $request->LastName,
                 'mobile' => $request->mobile,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),

@@ -42,8 +42,12 @@
                                     <option @if(in_array('users', $permissions)) selected @endif value="users">مدیریت کاربران</option>
                                     <option @if(in_array('slider', $permissions)) selected @endif value="slider">اسلایدر</option>
                                     <option @if(in_array('products', $permissions)) selected @endif value="products">محصولات</option>
+                                    <option @if(in_array('OtherProduct', $permissions)) selected @endif value="OtherProduct">سایر محصولات</option>
+                                    <option @if(in_array('service', $permissions)) selected @endif value="service">خدمات</option>
                                     <option @if(in_array('blogs', $permissions)) selected @endif value="blogs">مقالات</option>
                                     <option @if(in_array('news', $permissions)) selected @endif value="news">اخبار</option>
+                                    <option @if(in_array('gallery', $permissions)) selected @endif value="gallery">گالری</option>
+                                    <option @if(in_array('webinar', $permissions)) selected @endif value="webinar">وبینار</option>
                                     <option @if(in_array('LandingPage', $permissions)) selected @endif value="LandingPage">صفحات لندینگ</option>
                                     <option @if(in_array('Solution', $permissions)) selected @endif value="Solution">راه حل ها</option>
                                     <option @if(in_array('KnowledgeBase', $permissions)) selected @endif value="KnowledgeBase">پایگاه دانش</option>
@@ -53,6 +57,7 @@
                                     <option @if(in_array('newsletters', $permissions)) selected @endif value="newsletters">خبرنامه</option>
                                     <option @if(in_array('contacts', $permissions)) selected @endif value="contacts">تماس با ما</option>
                                     <option @if(in_array('socials', $permissions)) selected @endif value="socials">شبکه های اجتماعی</option>
+                                    <option @if(in_array('tickets', $permissions)) selected @endif value="tickets">تیکت ها</option>
                                     <option @if(in_array('comments', $permissions)) selected @endif value="comments">دیدگاه کاربران</option>
                                     <option @if(in_array('setting', $permissions)) selected @endif value="setting">تنظیمات</option>
                                 </select>
